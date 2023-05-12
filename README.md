@@ -4,7 +4,13 @@ Shut The Box: Traditional British pub game
 
 This is — for the moment at least — a command line only game.
 
-Compile it with a simple 'go build'.
+# What is this game?
+
+If you don't know the game, you can read the [wikipedia article](https://en.wikipedia.org/wiki/Shut_the_box) or watch a [video that shows how to play](https://www.youtube.com/watch?v=mwURQC7mjDI).
+
+# Install
+
+This is a simple command line binary. Download the version suitable for your OS / architecture combination, make it executable and put it in you PATH.
 
 # How to play?
 

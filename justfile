@@ -7,12 +7,6 @@ _listing:
 	go install
 	shutthebox
 
-watch:
-	@watchexec -e go -c -- just play
-
-watch-readme:
-	@watchexec -e md -c -- glow README.md
-
 x-compile:
 	[ -d binaries ] || mkdir -pv binaries
 	GOOS=darwin	  GOARCH=amd64 go build -o binaries/{{name}}-darwin-amd64-{{version}}
