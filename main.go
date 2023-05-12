@@ -9,41 +9,30 @@ import (
 	"time"
 )
 
-const MAX = 9
-
-type Flap struct {
-	Number int
-	IsUp   bool
-}
-
-var board [MAX]Flap
-
 func init() {
+	// populate initial board
 	for i := 0; i < MAX; i++ {
 		board[i] = Flap{i + 1, true}
 	}
 }
 
 func main() {
+	// infinite loop until 'q' or '0' is entered
 	for {
 		displayBoard()
 		roll()
-		close(choice())
+		flipdown(choice())
 	}
 }
 
 func displayBoard() {
 	for _, flap := range board {
-		if flap.IsUp {
-			fmt.Printf("[%d]", flap.Number)
-		} else {
-			fmt.Printf("[ ]")
-		}
+		fmt.Print(flap)
 	}
 	fmt.Println()
 }
 
-func close(num string) {
+func flipdown(num string) {
 	for i := 0; i < MAX; i++ {
 		s := strconv.Itoa(i + 1)
 		if strings.Contains(num, s) {
