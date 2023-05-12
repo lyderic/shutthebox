@@ -19,3 +19,9 @@
 
 # Go workspace file
 go.work
+
+# vim swap
+*.swp
+
+# just's justfile doesn't to go to github
+justfile
